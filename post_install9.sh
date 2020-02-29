@@ -37,23 +37,9 @@ clear
 tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo "    => Mise à jours des paquets effectué."
 tput setaf 7; echo "-------------------------------------------------"
-# Gestion des utilisateurs
-tput setaf 2; read -p "Entrez le mot de passe pour Root : " password_root
-tput setaf 2; echo "root:$password_root" | chpasswd
-tput setaf 7; echo "-------------------------------------------------"
-tput setaf 7; echo "    => Mot de passe de Root a été changé."
-tput setaf 7; echo "-------------------------------------------------"
-tput setaf 2; read -p "Entrez un nom d'utilisateur : " name_user
-tput setaf 2; read -p "Entrez le mot de passe pour l'utilisateur $name_user : " password_user
-tput setaf 2; adduser --quiet --disabled-password --shell /bin/bash --home /home/$name_user --gecos "User" $name_user
-tput setaf 2; echo "$name_user:$password_user" | chpasswd
-tput setaf 2; adduser $name_user sudo
-tput setaf 7; echo "-------------------------------------------------"
-tput bold; tput setaf 7; echo "    => L'utilisateur $name_user a été créé."
-tput bold; tput setaf 7; echo "    => $name_user fait parti du groupe sudo."
-tput setaf 7; echo "-------------------------------------------------"
+
 # Changement du motd
-ip_du_serveur=$(hostname -i)
+ip_du_serveur=$(hostname -I)
 tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo " => L'adresse IP du serveur est $ip_du_serveur."
 tput setaf 7; echo "-------------------------------------------------"
