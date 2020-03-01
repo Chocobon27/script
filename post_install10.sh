@@ -31,6 +31,7 @@ apt install -y nano
 apt install -y dnsutils
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone
+timedatectl set-timezone Europe/Paris
 clear
 tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo "    => Mise à jours des paquets effectué."
@@ -42,15 +43,15 @@ tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo " => L'adresse IP du serveur est $ip_du_serveur."
 tput setaf 7; echo "-------------------------------------------------"
 tput setaf 2; read -p "Entrez le nom du serveur : " name_server
-echo "
-__     __                                                                       _   
-\ \   / /                                                                      | |  
- \ \_/ /_   _   __ _   __ _  _ __  _   _  ______  ___  ___  _ __    ___   _ __ | |_ 
-  \   /| | | | / _` | / _` || '__|| | | ||______|/ _ \/ __|| '_ \  / _ \ | '__|| __|
-   | | | |_| || (_| || (_| || |   | |_| |       |  __/\__ \| |_) || (_) || |   | |_ 
-   |_|  \__,_| \__, | \__,_||_|    \__, |        \___||___/| .__/  \___/ |_|    \__|
-                __/ |               __/ |                  | |                      
-               |___/               |___/                   |_|                      
+echo " 
+ _     _                                                                             
+| |   | |                                                                       _    
+| |___| |_   _   ____   ____   ____  _   _     ____   ___  ____    ___    ____ | |_  
+ \_____/| | | | / _  | / _  | / ___)| | | |   / _  ) /___)|  _ \  / _ \  / ___)|  _) 
+   ___  | |_| |( ( | |( ( | || |    | |_| |  ( (/ / |___ || | | || |_| || |    | |__ 
+  (___)  \____| \_|| | \_||_||_|     \__  |   \____)(___/ | ||_/  \___/ |_|     \___)
+               (_____|              (____/                |_|                        
+
 
              Server   : $name_server
 			 
