@@ -51,8 +51,8 @@ iptables -t filter -A OUTPUT -p icmp -j REJECT
 
 # Normal(ssh) :
   
-iptables -t filter -A INPUT -p tcp --dport XXX -j ACCEPT
-iptables -t filter -A OUTPUT -p tcp --dport XXX -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 1804 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 1804 -j ACCEPT
 
 # HTTP
 
