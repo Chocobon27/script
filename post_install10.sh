@@ -12,7 +12,7 @@ deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sou
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    dpkg-reconfigure --frontend=noninteractive locales && \
+    dpkg-reconfigure --frontend=noninteractive locales
 
 # Mise à jours des paquets
 apt update && apt upgrade -y
