@@ -59,12 +59,12 @@ iptables -t filter -A OUTPUT -p tcp --dport 1804 -j ACCEPT
 iptables -t filter -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -t filter -A OUTPUT -p tcp --dport 80 -j ACCEPT
 
-   #HTTPS
+#HTTPS
 	
-	iptables -t filter -A INPUT -p tcp --dport 443 -j ACCEPT
-	iptables -t filter -A OUTPUT -p tcp --dport 443 -j ACCEPT
-	iptables -t filter -A INPUT -p udp --dport 443 -j ACCEPT
-	iptables -t filter -A OUTPUT -p udp --dport 443 -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 443 -j ACCEPT
+iptables -t filter -A INPUT -p udp --dport 443 -j ACCEPT
+iptables -t filter -A OUTPUT -p udp --dport 443 -j ACCEPT
 
 #SMTP
 
@@ -146,8 +146,8 @@ iptables -A INPUT -p tcp --tcp-flags ALL ALL -m limit --limit 1/h -j ACCEPT
 
 
 # MYSQL
-iptables -t filter -A INPUT -p tcp --dport XXX -j ACCEPT 
-iptables -t filter -A INPUT -p udp --dport XXX -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 3306 -j ACCEPT 
+iptables -t filter -A INPUT -p udp --dport 3306 -j ACCEPT
 
 # TS
 #iptables -t filter -A OUTPUT -p tcp --dport 41144 -j ACCEPT
@@ -155,8 +155,8 @@ iptables -t filter -A INPUT -p udp --dport XXX -j ACCEPT
 
 # QUERY
 
-#iptables -t filter -A OUTPUT -p tcp --dport XXX -j ACCEPT
-#iptables -t filter -A INPUT -p tcp --dport XXX -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 10011 -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 10011 -j ACCEPT
 #iptables -t filter -A OUTPUT -p tcp --dport 30033 -j ACCEPT
 #iptables -t filter -A INPUT -p tcp --dport 30033 -j ACCEPT
 
@@ -173,8 +173,8 @@ iptables -t filter -A INPUT -p udp --dport XXX -j ACCEPT
 #iptables -t filter -A INPUT -p udp --dport 9986:10288 -j ACCEPT
 
 # 1 TS SERVER
-#iptables -t filter -A OUTPUT -p udp --dport 9987 -j ACCEPT
-#iptables -t filter -A INPUT -p udp --dport 9987 -j ACCEPT
+iptables -t filter -A OUTPUT -p udp --dport 9987 -j ACCEPT
+iptables -t filter -A INPUT -p udp --dport 9987 -j ACCEPT
 
 
                
