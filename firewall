@@ -157,8 +157,11 @@ iptables -t filter -A INPUT -p udp --dport 3306 -j ACCEPT
 
 iptables -t filter -A OUTPUT -p tcp --dport 10011 -j ACCEPT
 iptables -t filter -A INPUT -p tcp --dport 10011 -j ACCEPT
-#iptables -t filter -A OUTPUT -p tcp --dport 30033 -j ACCEPT
-#iptables -t filter -A INPUT -p tcp --dport 30033 -j ACCEPT
+
+# FILE TRANSFER
+
+iptables -t filter -A OUTPUT -p tcp --dport 30033 -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 30033 -j ACCEPT
 
 # Account
 
