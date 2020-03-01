@@ -12,13 +12,7 @@ deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sou
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    sed -i -e 's/# en_US.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
-    sed -i -e 's/# nb_NO.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
-    echo 'LANG="fr_FR.UTF-8"'>/etc/default/locale && \
     dpkg-reconfigure --frontend=noninteractive locales && \
-    update-locale LANG=fr_FR.UTF-8
-
-
 
 # Mise à jours des paquets
 apt update && apt upgrade -y
