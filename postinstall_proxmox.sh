@@ -1,15 +1,6 @@
 #!/bin/bash
 
-# Changement des sources APT
-
-#echo "deb http://debian.mirrors.ovh.net/debian buster main
-#deb-src http://debian.mirrors.ovh.net/debian buster main
-#deb http://security.debian.org/debian-security buster/updates main
-#deb-src http://security.debian.org/debian-security buster/updates main
-# buster-updates, previously known as 'volatile'
-#deb http://debian.mirrors.ovh.net/debian buster-updates main
-#deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sources.list
-
+# source.list
 rm /etc/apt/sources.list.d/pve-enterprise.list
 echo "deb http://download.proxmox.com/debian/pve stretch pve-no-subscription" > /etc/apt/sources.list
 
