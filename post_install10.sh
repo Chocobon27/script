@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Changement des sources APT
-echo "deb http://debian.mirrors.ovh.net/debian buster main
-deb-src http://debian.mirrors.ovh.net/debian buster main
-deb http://security.debian.org/debian-security buster/updates main
-deb-src http://security.debian.org/debian-security buster/updates main
+#echo "deb http://debian.mirrors.ovh.net/debian buster main
+#deb-src http://debian.mirrors.ovh.net/debian buster main
+#deb http://security.debian.org/debian-security buster/updates main
+#deb-src http://security.debian.org/debian-security buster/updates main
 # buster-updates, previously known as 'volatile'
-deb http://debian.mirrors.ovh.net/debian buster-updates main
-deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sources.list
+#deb http://debian.mirrors.ovh.net/debian buster-updates main
+#deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sources.list
 
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone && \
