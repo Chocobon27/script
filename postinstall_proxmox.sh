@@ -2,7 +2,7 @@
 
 # source.list
 rm /etc/apt/sources.list.d/pve-enterprise.list
-echo "deb http://download.proxmox.com/debian/pve stretch pve-no-subscription" > /etc/apt/sources.list
+echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
 
 # Mise à jours des paquets
 apt update && apt upgrade -y
