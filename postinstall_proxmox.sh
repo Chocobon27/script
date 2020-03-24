@@ -1,8 +1,19 @@
 #!/bin/bash
 
-# source.list
+# Changement des sources APT
 rm /etc/apt/sources.list.d/pve-enterprise.list
-echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
+#echo "deb http://debian.mirrors.ovh.net/debian buster main
+#deb-src http://debian.mirrors.ovh.net/debian buster main
+#deb http://security.debian.org/debian-security buster/updates main
+#deb-src http://security.debian.org/debian-security buster/updates main
+# buster-updates, previously known as 'volatile'
+#deb http://debian.mirrors.ovh.net/debian buster-updates main
+#deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sources.list
+
+#Configuration de timezone et de locale
+echo "Europe/Paris" > /etc/timezone && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    dpkg-reconfigure --frontend=noninteractive locales
 
 # Mise à jours des paquets
 apt update && apt upgrade -y
@@ -13,7 +24,9 @@ apt install -y curl
 apt install -y git
 apt install -y nano
 apt install -y dnsutils
-
+#Configuration de timezone et de locale
+echo "Europe/Paris" > /etc/timezone
+timedatectl set-timezone Europe/Paris
 clear
 tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo "    => Mise à jours des paquets effectué."
@@ -33,7 +46,6 @@ echo "
    ___  | |_| |( ( | |( ( | || |    | |_| |  ( (/ / |___ || | | || |_| || |    | |__ 
   (___)  \____| \_|| | \_||_||_|     \__  |   \____)(___/ | ||_/  \___/ |_|     \___)
                (_____|              (____/                |_|                        
-
              Server   : $name_server
 			 
              IP       : $ip_du_serveur
