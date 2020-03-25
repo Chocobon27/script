@@ -2,13 +2,13 @@
 
 # Changement des sources APT
 rm /etc/apt/sources.list.d/pve-enterprise.list
-#echo "deb http://debian.mirrors.ovh.net/debian buster main
-#deb-src http://debian.mirrors.ovh.net/debian buster main
-#deb http://security.debian.org/debian-security buster/updates main
-#deb-src http://security.debian.org/debian-security buster/updates main
-# buster-updates, previously known as 'volatile'
-#deb http://debian.mirrors.ovh.net/debian buster-updates main
-#deb-src http://debian.mirrors.ovh.net/debian buster-updates main" > /etc/apt/sources.list
+echo "deb http://ftp.fr.debian.org/debian buster main contrib
+
+deb http://ftp.fr.debian.org/debian buster-updates main contrib
+
+# security updates
+deb http://security.debian.org buster/updates main contrib
+deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
 
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone && \
