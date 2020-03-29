@@ -8,7 +8,8 @@ deb http://ftp.fr.debian.org/debian buster-updates main contrib
 
 # security updates
 deb http://security.debian.org buster/updates main contrib
-deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
+
+deb [arch=amd64] http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
 
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone && \
