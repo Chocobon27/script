@@ -34,7 +34,7 @@ tput bold; tput setaf 7; echo "    => Mise à jours des paquets effectué."
 tput setaf 7; echo "-------------------------------------------------"
 
 # Changement du motd
-ip_du_serveur=$(hostname -i)
+ip_du_serveur=$(hostname -I)
 tput setaf 7; echo "-------------------------------------------------"
 tput bold; tput setaf 7; echo " => L'adresse IP du serveur est $ip_du_serveur."
 tput setaf 7; echo "-------------------------------------------------"
