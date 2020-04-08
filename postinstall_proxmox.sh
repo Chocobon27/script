@@ -25,6 +25,7 @@ apt install -y curl
 apt install -y git
 apt install -y nano
 apt install -y dnsutils
+apt install -y screenfetch
 #Configuration de timezone et de locale
 echo "Europe/Paris" > /etc/timezone
 timedatectl set-timezone Europe/Paris
