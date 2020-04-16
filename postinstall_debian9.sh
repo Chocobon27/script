@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # Changement des sources APT
-#echo "deb http://debian.mirrors.ovh.net/debian/ stretch main contrib non-free
-#deb-src http://debian.mirrors.ovh.net/debian/ stretch main contrib non-free
-#deb http://security.debian.org/ stretch/updates main contrib non-free
-#deb-src http://security.debian.org/ stretch/updates main contrib non-free
+echo "deb http://debian.mirrors.ovh.net/debian/ stretch main contrib non-free
+deb-src http://debian.mirrors.ovh.net/debian/ stretch main contrib non-free
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free
 # stretch-updates, previously known as 'volatile'
-#deb http://debian.mirrors.ovh.net/debian/ stretch-updates main contrib non-free
-#deb-src http://debian.mirrors.ovh.net/debian/ stretch-updates main contrib non-free" > /etc/apt/sources.list
+deb http://debian.mirrors.ovh.net/debian/ stretch-updates main contrib non-free
+deb-src http://debian.mirrors.ovh.net/debian/ stretch-updates main contrib non-free" > /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian stretch-backports main' > \
  /etc/apt/sources.list.d/backports.list
 
